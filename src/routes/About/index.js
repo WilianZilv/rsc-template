@@ -63,7 +63,8 @@ export default function About() {
 			<br />
 			<p>
 				Como assim? Onde o quê? Não entendi a pergunta. Mas agora vá pro
-				código dar uma olhada e começar a trabalhar 👍{' '}
+				código dar uma olhada
+				<span role="img">👍</span>
 			</p>
 		</Container>
 	)
