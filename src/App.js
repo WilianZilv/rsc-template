@@ -1,7 +1,7 @@
 import React from 'react'
 import GlobalStyle from './styles/global'
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import { routes } from './routes'
 import Header from './components/Header'
 
@@ -19,6 +19,7 @@ function App() {
 							component={component}
 						/>
 					))}
+					<Redirect from="*" to="/" />
 				</Switch>
 			</BrowserRouter>
 			<GlobalStyle />

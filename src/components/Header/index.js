@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container } from './styles'
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { onHeader } from '../../routes'
 
 export default function Header() {
@@ -14,9 +14,14 @@ export default function Header() {
 				<nav>
 					{onHeader.map(({ name, path }) => {
 						return (
-							<Link className="link" key={name} to={path}>
+							<NavLink
+								key={name}
+								to={path}
+								exact
+								activeClassName="active"
+							>
 								{name}
-							</Link>
+							</NavLink>
 						)
 					})}
 				</nav>

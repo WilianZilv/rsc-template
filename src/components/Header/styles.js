@@ -18,14 +18,17 @@ export const Container = styled.div`
 		box-shadow: 0px 2px 4px rgba(25, 0, 0, 0.1);
 
 		font-family: 'Questrial', sans-serif;
-		.link {
+		a {
 			all: unset;
 			font-family: 'Roboto';
 			margin: 0px 8px;
 			cursor: pointer;
 			:hover {
-				border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+				border-bottom: 2px solid rgba(0, 0, 0, 0.75);
 			}
+		}
+		.active {
+			border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 		}
 		${responsive}
 	}
