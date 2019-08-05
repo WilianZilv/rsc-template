@@ -1,7 +1,7 @@
-import commonjs from 'rollup-plugin-commonjs'
+import replace from 'rollup-plugin-replace'
 import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
+import commonjs from 'rollup-plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 
 module.exports = {
@@ -21,7 +21,9 @@ module.exports = {
 		resolve({
 			browser: true
 		}),
-		babel(),
+		babel({
+			plugins: ['@babel/plugin-transform-react-jsx']
+		}),
 		commonjs({
 			include: 'node_modules/**',
 			namedExports: {
