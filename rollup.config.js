@@ -43,7 +43,11 @@ module.exports = {
 				]
 			}
 		}),
-		terser()
+		terser({
+			compress: {
+				passes: 2
+			}
+		})
 	],
 	external: ['react', 'react-dom']
 }
