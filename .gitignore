@@ -1,1 +1,3 @@
 /node_modules
+/build
+/rollup_build/bundle.js

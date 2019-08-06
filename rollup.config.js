@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser'
 module.exports = {
 	input: 'src/index.js',
 	output: {
-		file: 'build/bundle.js',
+		file: 'rollup_build/bundle.js',
 		format: 'iife',
 		globals: {
 			react: 'React',
