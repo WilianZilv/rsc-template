@@ -25,7 +25,6 @@ module.exports = {
 			plugins: ['@babel/plugin-transform-react-jsx']
 		}),
 		commonjs({
-			include: 'node_modules/**',
 			namedExports: {
 				'node_modules/react/index.js': [
 					'Component',
