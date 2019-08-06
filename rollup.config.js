@@ -1,5 +1,6 @@
 import replace from 'rollup-plugin-replace'
 import resolve from 'rollup-plugin-node-resolve'
+import css from 'rollup-plugin-css-only'
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
@@ -21,6 +22,7 @@ module.exports = {
 		resolve({
 			browser: true
 		}),
+		css({ output: 'rollup_build/bundle.css' }),
 		babel({
 			plugins: ['@babel/plugin-transform-react-jsx']
 		}),
