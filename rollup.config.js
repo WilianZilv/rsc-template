@@ -5,10 +5,13 @@ import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 
+const input = 'src/index.js'
+const outputDir = 'rollup_build'
+
 module.exports = {
-	input: 'src/index.js',
+	input: input,
 	output: {
-		file: 'rollup_build/bundle.js',
+		file: outputDir + '/bundle.js',
 		format: 'iife',
 		globals: {
 			react: 'React',
@@ -20,9 +23,10 @@ module.exports = {
 			'process.env.NODE_ENV': '\'production\''
 		}),
 		resolve({
-			browser: true
+			browser: true,
+			extensions: ['.mjs', '.js', '.jsx', '.json']
 		}),
-		css({ output: 'rollup_build/bundle.css' }),
+		css({ output: outputDir + '/bundle.css' }),
 		babel({
 			plugins: ['@babel/plugin-transform-react-jsx']
 		}),

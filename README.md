@@ -16,6 +16,12 @@ react-router-dom ^5.0.1<br/>
 
 <code>\$ npm start</code>
 
-## 3. Gere uma build com o rollup
+# Gerando uma build com o rollup
+
+## 1. Instale o rollup globalmente
+
+<code>\$ npm i -g rollup</code>
+
+## 2. Gere a build
 
 <code>\$ rollup -c</code>
